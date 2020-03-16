@@ -54,7 +54,7 @@ void write4bits( uint8_t bits ) {
   pulseENABLE();
 }
 
-void command( unsigned char cmd ) {
+void command( uint8_t cmd ) {
   CTRL_PORT &= ~RS; // RS pin is low for commands
   write4bits( cmd>>4 );
   write4bits( cmd );
@@ -82,7 +82,7 @@ void lcdInit( void ) {
   command( 0x06 ); // Left-to-right text
 }
 
-void data( unsigned char c ) {
+void data( uint8_t c ) {
   CTRL_PORT |= RS; // RS pin is high for data
   write4bits( c>>4 );
   write4bits( c );

@@ -5,7 +5,7 @@
 
 void pulseENABLE( void );
 void write4bits( uint8_t );
-void command( unsigned char );
+void command( uint8_t );
 void lcdInit( void );
-void data( unsigned char );
+void data( uint8_t );
 void lcdPuts( unsigned char *);
